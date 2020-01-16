@@ -1,15 +1,61 @@
+Monitoring Tools:
+Grafana
+Nagios
+Splunk
+Kibana
+
+
+KIBANA:
+
 FILEBEAT -> LOGSTASH -> ELASTIC SEARCH -> KIBANA
+
+Logstash: server component of logstash that processes incoming logs
+
+Elasticsearch: stores all the logs
+
+Kibana: web interface for searching and visualizing logs, which will be proxied through Nginx
+
+Filebeat: Installed on client servers that will send their logs to logstash, Filebeat acts as a log shipping agent that utilizes the lumberjack networking protocol to communicate with Logstash
+
 
 Links:
 
 For Depth Knowledge:
 https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elk-stack-on-ubuntu-14-04#prerequisites
-
+Kibana:
+	Install Java
+	Install Elasticsearch
+	Install Kibana
+	Install nginx
+	Install Logstash
+	SSL Certificates
+	Configure Logstash
+	Load Kibana Dashboards
+	Elasticsearch Template
+	SetUp Filebeat
+	Test Filebeat
+	Kibana Connection
+	Overview of PieCharts
+	System Metrics Overview
+	Real Time Implementations
+ 
 
 For Simple Installations:
 https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-16-04#step-5-%E2%80%94-exploring-kibana-dashboards
 
+
 For Errors:
 https://discuss.elastic.co/t/cant-load-kibana-on-5601/41886
 https://discuss.elastic.co/t/unable-to-see-my-data-in-the-kibana/67267
+
+Scenarios:
+Suppose you want to visualise the syslog and other logs for 200 Servers 
+Solution:
+Install Logstash, ElasticSearch, Kibana & Filebeat on Host Server
+Install Filebeat on rest of the Client
+
+
+
+
+
 
